@@ -2,6 +2,8 @@ package com.cenfotec.proyecto.documentos;
 
 import java.time.LocalDate;
 
+import com.cenfotec.proyecto.documentos.propiedades.Propiedad;
+
 public class LicenciaMunicipalFuncionamiento extends Documento {
 	private String fechaVencimiento;
 	
@@ -9,6 +11,10 @@ public class LicenciaMunicipalFuncionamiento extends Documento {
 			String fechaVencimiento) {
 		super(fechaSolicitud, fechaResolucion, propiedad);
 		this.fechaVencimiento = fechaVencimiento;
+	}
+
+	public LicenciaMunicipalFuncionamiento() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getFechaVencimiento() {

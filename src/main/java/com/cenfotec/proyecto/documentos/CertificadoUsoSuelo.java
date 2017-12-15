@@ -1,5 +1,7 @@
 package com.cenfotec.proyecto.documentos;
 
+import com.cenfotec.proyecto.documentos.propiedades.Propiedad;
+
 public class CertificadoUsoSuelo extends Documento{
 	
 	private String nombreDepartamento;
@@ -8,6 +10,10 @@ public class CertificadoUsoSuelo extends Documento{
 			String nombreDepartamento) {
 		super(fechaSolicitud, fechaResolucion, propiedad);
 		this.nombreDepartamento = nombreDepartamento;
+	}
+
+	public CertificadoUsoSuelo() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getNombreDepartamento() {

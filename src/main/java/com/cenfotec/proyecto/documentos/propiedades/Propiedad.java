@@ -1,4 +1,4 @@
-package com.cenfotec.proyecto.documentos;
+package com.cenfotec.proyecto.documentos.propiedades;
 
 import java.time.LocalDate;
 

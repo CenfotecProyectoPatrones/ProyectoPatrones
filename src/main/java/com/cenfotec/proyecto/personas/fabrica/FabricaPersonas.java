@@ -6,7 +6,7 @@ import com.cenfotec.proyecto.personas.Persona;
 import com.cenfotec.proyecto.personas.tipo.TipoPersona;
 
 public final class FabricaPersonas {
-	public static Persona createCuenta(TipoPersona popcion){
+	public static Persona createPersona(TipoPersona popcion){
 		switch(popcion){
 			case Contribuyente:
 				return new FuncionarioMunicipal();
