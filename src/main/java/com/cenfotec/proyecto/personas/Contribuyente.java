@@ -1,12 +1,14 @@
 package com.cenfotec.proyecto.personas;
 
-import java.time.LocalDate;
 
 public class Contribuyente extends Persona {
 	private String provincia;
 	private String distrito;
 	private String canton;
 	private String direccion;
+	
+	public Contribuyente() {
+	}
 	
 	public Contribuyente(String nombreCompleto, String cedulaIdentidad, String estadoCivil, String fechaNacimiento,
 			boolean estado, String provincia, String distrito, String canton, String direccion) {

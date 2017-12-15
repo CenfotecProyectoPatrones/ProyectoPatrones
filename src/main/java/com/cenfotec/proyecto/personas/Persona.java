@@ -2,8 +2,6 @@ package com.cenfotec.proyecto.personas;
 
 import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class Persona {
 	protected String nombreCompleto;
 	protected String cedulaIdentidad;

@@ -1,7 +1,5 @@
 package com.cenfotec.proyecto.documentos;
 
-import java.time.LocalDate;
-
 public class CertificadoUsoSuelo extends Documento{
 	
 	private String nombreDepartamento;

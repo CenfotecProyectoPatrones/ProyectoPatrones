@@ -2,8 +2,6 @@ package com.cenfotec.proyecto.documentos;
 
 import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class Propiedad {
 	private int numeroPlanoCatastro;
 	private LocalDate fechaRegistro;
