@@ -1,14 +1,7 @@
 package com.cenfotec.proyecto;
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
-
-import com.cenfotec.proyecto.documentos.ActualizacionInformacionContribuyente;
-import com.cenfotec.proyecto.documentos.Documento;
-import com.cenfotec.proyecto.documentos.Propiedad;
-import com.cenfotec.proyecto.personas.FuncionarioMunicipal;
 import com.cenfotec.proyecto.personas.Persona;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -16,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class main {
 
-	public static void main(String[] args) {
+	public main(String[] args) {
 		// TODO Auto-generated method stub
 		run();
 	}
@@ -49,7 +42,6 @@ public class main {
 	}
 	private static  Persona createDummyObjectPersona() { 
 		String fecha="1992-07-02";
-		LocalDate date=LocalDate.parse(fecha);
 		Persona persona= new Persona ("Fracisco","115040529","Soltero",fecha,true);
 		return persona;
 	}

@@ -2,6 +2,8 @@ package com.cenfotec.proyecto.documentos;
 
 import java.time.LocalDate;
 
+import com.cenfotec.proyecto.documentos.propiedades.Propiedad;
+
 
 
 public class Documento implements IDocumento {
