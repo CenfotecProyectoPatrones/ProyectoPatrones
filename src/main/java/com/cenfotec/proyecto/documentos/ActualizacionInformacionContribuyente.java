@@ -9,6 +9,11 @@ public class ActualizacionInformacionContribuyente implements IDocumento {
 	private String estadoCivil;
 	
 	
+	
+	
+	public ActualizacionInformacionContribuyente() {
+		super();
+	}
 	public ActualizacionInformacionContribuyente(String provincia, String distrito, String canton, String direccion,
 			boolean estado, String estadoCivil) {
 		super();
@@ -55,6 +60,12 @@ public class ActualizacionInformacionContribuyente implements IDocumento {
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
+	@Override
+	public String toString() {
+		return "ActualizacionInformacionContribuyente [provincia=" + provincia + ", distrito=" + distrito + ", canton="
+				+ canton + ", direccion=" + direccion + ", estado=" + estado + ", estadoCivil=" + estadoCivil + "]";
+	}
+	
 	
 	
 	

@@ -4,22 +4,22 @@ import java.time.LocalDate;
 
 public class FuncionarioMunicipal extends Persona {
 	
-	private boolean numeroEmpleado;
+	private int numeroEmpleado;
 	private String nombreMiembro;
 	private String nombreDepartamento;
 	
 	public FuncionarioMunicipal(String nombreCompleto, String cedulaIdentidad, String estadoCivil,
-			LocalDate fechaNacimiento, boolean estado, boolean numeroEmpleado, String nombreMiembro,
+			String fechaNacimiento, boolean estado, int numeroEmpleado, String nombreMiembro,
 			String nombreDepartamento) {
 		super(nombreCompleto, cedulaIdentidad, estadoCivil, fechaNacimiento, estado);
 		this.numeroEmpleado = numeroEmpleado;
 		this.nombreMiembro = nombreMiembro;
 		this.nombreDepartamento = nombreDepartamento;
 	}
-	public boolean isNumeroEmpleado() {
+	public int getNumeroEmpleado() {
 		return numeroEmpleado;
 	}
-	public void setNumeroEmpleado(boolean numeroEmpleado) {
+	public void setNumeroEmpleado(int numeroEmpleado) {
 		this.numeroEmpleado = numeroEmpleado;
 	}
 	public String getNombreMiembro() {

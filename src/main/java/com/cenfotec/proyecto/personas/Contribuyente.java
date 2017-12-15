@@ -8,7 +8,7 @@ public class Contribuyente extends Persona {
 	private String canton;
 	private String direccion;
 	
-	public Contribuyente(String nombreCompleto, String cedulaIdentidad, String estadoCivil, LocalDate fechaNacimiento,
+	public Contribuyente(String nombreCompleto, String cedulaIdentidad, String estadoCivil, String fechaNacimiento,
 			boolean estado, String provincia, String distrito, String canton, String direccion) {
 		super(nombreCompleto, cedulaIdentidad, estadoCivil, fechaNacimiento, estado);
 		this.provincia = provincia;

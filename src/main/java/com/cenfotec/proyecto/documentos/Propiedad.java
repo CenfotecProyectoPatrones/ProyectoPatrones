@@ -2,13 +2,18 @@ package com.cenfotec.proyecto.documentos;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Propiedad {
 	private int numeroPlanoCatastro;
 	private LocalDate fechaRegistro;
 	
-	public Propiedad(int pnumeroPlanoCatastro, LocalDate pfechaRegistro) {
+	
+	public Propiedad(int pnumeroPlanoCatastro, LocalDate fechaRegistro) {
 		this.numeroPlanoCatastro = pnumeroPlanoCatastro;
-		this.fechaRegistro = pfechaRegistro;
+		this.fechaRegistro = fechaRegistro;
+	}
+	public Propiedad() {
 	}
 
 	public int getNumeroPlanoCatastro() {
@@ -26,4 +31,6 @@ public class Propiedad {
 	public void setFechaRegistro(LocalDate fechaRegistro) {
 		this.fechaRegistro = fechaRegistro;
 	}
+	
+	
 }

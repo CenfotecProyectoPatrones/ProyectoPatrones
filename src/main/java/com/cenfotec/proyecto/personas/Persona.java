@@ -2,14 +2,16 @@ package com.cenfotec.proyecto.personas;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Persona {
 	protected String nombreCompleto;
 	protected String cedulaIdentidad;
 	protected String estadoCivil;
-	protected LocalDate fechaNacimiento;
+	protected String fechaNacimiento;
 	protected boolean estado;
 	
-	public Persona(String nombreCompleto, String cedulaIdentidad, String estadoCivil, LocalDate fechaNacimiento,
+	public Persona(String nombreCompleto, String cedulaIdentidad, String estadoCivil, String fechaNacimiento,
 			boolean estado) {
 		super();
 		this.nombreCompleto = nombreCompleto;
@@ -17,8 +19,12 @@ public class Persona {
 		this.estadoCivil = estadoCivil;
 		this.fechaNacimiento = fechaNacimiento;
 		this.estado = estado;
+	}	
+	public Persona() {
+		super();
 	}
-	
+
+
 	public String getNombreCompleto() {
 		return nombreCompleto;
 	}
@@ -37,10 +43,16 @@ public class Persona {
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
-	public LocalDate getFechaNacimiento() {
-		return fechaNacimiento;
+	public LocalDate getFechaNacimientoLocal() {
+		LocalDate fechaN = LocalDate.parse(this.fechaNacimiento);
+		return fechaN;
 	}
-	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+	
+	public String getFechaNacimiento() {
+		return this.fechaNacimiento;
+	}
+	
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 	public boolean isEstado() {
@@ -48,6 +60,11 @@ public class Persona {
 	}
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+	@Override
+	public String toString() {
+		return "Persona [nombreCompleto=" + nombreCompleto + ", cedulaIdentidad=" + cedulaIdentidad + ", estadoCivil="
+				+ estadoCivil + ", fechaNacimiento=" + fechaNacimiento + ", estado=" + estado;
 	}
 	
 	

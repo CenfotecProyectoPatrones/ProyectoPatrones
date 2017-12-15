@@ -6,7 +6,7 @@ public class CertificadoUsoSuelo extends Documento{
 	
 	private String nombreDepartamento;
 
-	public CertificadoUsoSuelo(LocalDate fechaSolicitud, LocalDate fechaResolucion, Propiedad propiedad,
+	public CertificadoUsoSuelo(String fechaSolicitud, String fechaResolucion, Propiedad propiedad,
 			String nombreDepartamento) {
 		super(fechaSolicitud, fechaResolucion, propiedad);
 		this.nombreDepartamento = nombreDepartamento;
