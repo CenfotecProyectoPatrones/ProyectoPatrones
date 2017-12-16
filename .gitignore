@@ -28,3 +28,5 @@ target/classes/META-INF/maven/com.cenfotec/ProyectoPatrones/pom.properties
 >>>>>>> db02af61edd28cb1564c9f7dd21f89b9e6b45504
 target/classes/META-INF/maven/com.cenfotec/ProyectoPatrones/pom.properties
 target/classes/META-INF/maven/com.cenfotec/ProyectoPatrones/pom.properties
+*.MF
+*.properties
