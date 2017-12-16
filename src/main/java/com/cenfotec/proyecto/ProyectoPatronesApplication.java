@@ -10,7 +10,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.cenfotec.proyecto.gestor.GestorPersona;
-import com.cenfotec.proyecto.gestor.GestorSolicitud;
 import com.cenfotec.proyecto.personas.Persona;
 import com.cenfotec.proyecto.solicitud.Solicitud;
 import com.fasterxml.jackson.core.JsonGenerationException;
@@ -40,11 +39,11 @@ public class ProyectoPatronesApplication {
 		System.out.println("Ingrese su contrasenna:");
 		contrasenna = in.readLine();
 		if(GestorPersona.verificarLogin(usuario,contrasenna)==true) {
-			mostrarMenu();
+			mostarMenu();
 		}
 	}
 	
-	private static void mostrarMenu() {
+	private static void mostarMenu() {
 		// TODO Auto-generated method stub
 		int opcion = 0;
 		System.out.println("1.Mostrar solicitudes abiertas.\n"
@@ -59,6 +58,7 @@ public class ProyectoPatronesApplication {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		while(opcion != 3 && opcion < 3) {
 			switch(opcion) {
 			case 1:
 				listarSolicitudes();
@@ -70,13 +70,14 @@ public class ProyectoPatronesApplication {
 				System.out.println("Opcion no correcta.");
 			break;
 			}
+		}
 		
 	}
 	
 	private static void listarSolicitudes() {
 		// TODO Auto-generated method stub
 		ArrayList<Solicitud> solicitudes;
-		solicitudes = GestorSolicitud.ListarTramites();
+		solicitudes = GestorSolicitud.listarTramites();
 		int index = 0;
 		for(Solicitud i: solicitudes) {
 			System.out.println(index+"."+i.toString());
@@ -87,70 +88,14 @@ public class ProyectoPatronesApplication {
 	private static void listarSolicitudesTerminadas() {
 		// TODO Auto-generated method stub
 		ArrayList<Solicitud> solicitudes;
-		int index = 0;
-		solicitudes = GestorSolicitud.SelecionarTramitesTerminados();
+		int index;
+		solicitudes = GestorSolicitud.listarTramitesTerminados();
 		for(Solicitud i: solicitudes) {
 			System.out.println(i.toString());
 		}
 		System.out.println("Digite el indice de la solicitud:");
-		try {
-			index = Integer.parseInt(in.readLine());
-		} catch (NumberFormatException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		solicitarSolicitud(index);
+		index = Integer.parseInt(in.readLine());
+		GestorSoli
 		
-	}
-	
-	private static void solicitarSolicitud(int index) {
-		// TODO Auto-generated method stub
-		Solicitud solicitud = GestorSolicitud.SelecionarTramite(index);
-		switch(solicitud.getEstado().toString()) {
-		case "Aceptado":
-			System.out.println("Este Tramite ha sido aceptado.");
-			solicitud.finalizar();
-		break;
-		case "Notificado":
-			
-		break;
-		case "Solicitado":
-			System.out.println("Esta solicitud se encuentra en tramite.");
-			solicitud=confirmar(solicitud);
-		break;
-		case "Verificado":
-			
-		break;
-			
-		}
-	}
-	
-	private static Solicitud confirmar(Solicitud solicitud) {
-		// TODO Auto-generated method stub
-		int opcion = 0;
-		System.out.println("1.Aceptar.\n"
-						 + "2.Rechazar.\n"
-						 + "3.Salir.");
-		try {
-			opcion = Integer.parseInt(in.readLine());
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			switch(opcion) {
-			case 1:
-				solicitud.aceptar();
-				return solicitud;
-			case 2:
-				solicitud.rechazar();
-				return solicitud;
-			default:
-				System.out.println("Opcion no correcta.");
-			break;
-			}
-		return null;
 	}
 }

@@ -7,5 +7,4 @@ public interface State {
 	void verificar();
 	void notificar();
 	void finalizar();
-	String toString();
 }
