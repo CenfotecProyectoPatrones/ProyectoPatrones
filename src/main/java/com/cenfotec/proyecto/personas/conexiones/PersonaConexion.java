@@ -1,4 +1,4 @@
-package com.cenfotec.proyecto.personas.conexciones;
+package com.cenfotec.proyecto.personas.conexiones;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,12 +11,12 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Contribuyente {
+public class PersonaConexion {
 
-	public static void guardarJson(Contribuyente documento) {
+	public static void guardarJson(Persona documento) {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			mapper.writeValue(new File("Json//Contribuyente.json"), documento);
+			mapper.writeValue(new File("Json//Persona.json"), documento);
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
@@ -26,13 +26,13 @@ public class Contribuyente {
 		}
 	}
 	
-	public static Contribuyente devolverObjecto() {
+	public static Persona devolverObjecto() {
 		ObjectMapper mapper = new ObjectMapper();
-		File jsonFile = new File("Json//Contribuyente.json");
-		Contribuyente doc=null;
+		File jsonFile = new File("Json//Persona.json");
+		Persona doc=null;
 		try {
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			doc=mapper.readValue(jsonFile,Contribuyente.class);;
+			doc=mapper.readValue(jsonFile,Persona.class);;
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {

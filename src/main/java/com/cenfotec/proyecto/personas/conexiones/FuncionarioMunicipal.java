@@ -1,4 +1,4 @@
-package com.cenfotec.proyecto.personas.conexciones;
+package com.cenfotec.proyecto.personas.conexiones;
 
 import java.io.File;
 import java.io.IOException;
