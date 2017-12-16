@@ -25,8 +25,8 @@ public class ProyectoPatronesApplication {
 		Persona fran=null;
 		try {
 			// Convert object to JSON string and save into a file directly
-			mapper.writeValue(new File("Json//staff.json"), persona);
-			File jsonFile = new File("Json//staff.json");
+			mapper.writeValue(new File("Json//admin.json"), persona);
+			File jsonFile = new File("Json//admin.json");
 			// Convert object to JSON string
 			String jsonInString = mapper.writeValueAsString(persona);
 			System.out.println(jsonInString);
@@ -48,7 +48,7 @@ public class ProyectoPatronesApplication {
 	}
 	private static  Persona createDummyObjectPersona() { 
 		String fecha="1992-07-02";
-		Persona persona= new Persona ("Fracisco","115040529","Soltero",fecha,true);
+		Persona persona= new Persona ("admin","12345","Soltero",fecha,true);
 		return persona;
 	}
 	
