@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class SolicitudCertificadoUsoSueloConexion {
 
-	public static void guardarJson(SolicitudCertificadoUsoSueloConexion documento) {
+	public static void guardarJson(SolicitudCertificadoUsoSuelo documento) {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			mapper.writeValue(new File("Json//SolicitudCertificadoUsoSuelo.json"), documento);
@@ -27,13 +27,13 @@ public class SolicitudCertificadoUsoSueloConexion {
 		}
 	}
 	
-	public static SolicitudCertificadoUsoSueloConexion devolverObjecto() {
+	public static SolicitudCertificadoUsoSuelo devolverObjecto() {
 		ObjectMapper mapper = new ObjectMapper();
 		File jsonFile = new File("Json//SolicitudCertificadoUsoSuelo.json");
-		SolicitudCertificadoUsoSueloConexion doc=null;
+		SolicitudCertificadoUsoSuelo doc=null;
 		try {
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			doc=mapper.readValue(jsonFile,SolicitudCertificadoUsoSueloConexion.class);;
+			doc=mapper.readValue(jsonFile,SolicitudCertificadoUsoSuelo.class);;
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
