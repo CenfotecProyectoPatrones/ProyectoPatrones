@@ -6,8 +6,7 @@ import com.cenfotec.proyecto.solicitud.Solicitud;
 public class Aceptado implements State {
 	
 	private Solicitud solicitud;
-
-
+	
 	public Aceptado(Solicitud aThis) {
 		this.solicitud = aThis;
 	}
