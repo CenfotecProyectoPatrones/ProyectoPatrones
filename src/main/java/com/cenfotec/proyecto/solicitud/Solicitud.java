@@ -134,4 +134,8 @@ public abstract  class Solicitud implements State{
 	public void finalizar() {
 		estado.finalizar();
 	}
+	@Override
+    public String toString() {
+        return this.documento.toString();
+    }
 }

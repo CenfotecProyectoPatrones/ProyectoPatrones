@@ -29,5 +29,15 @@ public class LicenciaMunicipalFuncionamiento extends Documento {
 	public void setFechaVencimiento(String fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
 	}
+
+	@Override
+	public String toString() {
+		return "LicenciaMunicipalFuncionamiento\n"
+				+"	Fecha Vencimiento:" + fechaVencimiento + "\n"
+				+"	Fecha Solicitud:" + fechaSolicitud +"\n"
+				+"	Fecha Resolucion:" + fechaResolucion +"\n"
+				+"	Propiedad:" + propiedad;
+	}
+	
 	
 }

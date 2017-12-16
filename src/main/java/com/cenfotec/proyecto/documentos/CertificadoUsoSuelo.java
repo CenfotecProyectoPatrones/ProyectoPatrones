@@ -23,7 +23,14 @@ public class CertificadoUsoSuelo extends Documento{
 	public void setNombreDepartamento(String nombreDepartamento) {
 		this.nombreDepartamento = nombreDepartamento;
 	}
-	
-	
 
+	@Override
+	public String toString() {
+		return "CertificadoUsoSuelo\n"
+				+ "	Nombre Departamento:" + nombreDepartamento 
+				+ "	Fecha Solicitud:" + fechaSolicitud
+				+ "	Fecha Resolucion:" + fechaResolucion 
+				+ "	Propiedad:" + propiedad;
+	}
+	
 }

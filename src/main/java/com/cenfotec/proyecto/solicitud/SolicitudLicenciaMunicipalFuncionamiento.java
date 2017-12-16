@@ -10,5 +10,5 @@ public class SolicitudLicenciaMunicipalFuncionamiento extends Solicitud {
 		// TODO Auto-generated constructor stub
 	}
 	
-
+	
 }

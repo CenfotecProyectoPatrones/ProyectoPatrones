@@ -16,7 +16,7 @@ public class PersonaConexion {
 	public static void guardarJson(Persona documento) {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			mapper.writeValue(new File("Json//Persona.json"), documento);
+			mapper.writeValue(new File("Json//admin.json"), documento);
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
@@ -28,7 +28,7 @@ public class PersonaConexion {
 	
 	public static Persona devolverObjecto() {
 		ObjectMapper mapper = new ObjectMapper();
-		File jsonFile = new File("Json//Persona.json");
+		File jsonFile = new File("Json//admin.json");
 		Persona doc=null;
 		try {
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
