@@ -19,8 +19,8 @@ public class main {
 		Persona fran=null;
 		try {
 			// Convert object to JSON string and save into a file directly
-			mapper.writeValue(new File("staff.json"), persona);
-			File jsonFile = new File("staff.json");
+			mapper.writeValue(new File("Json//staff.json"), persona);
+			File jsonFile = new File("Json//staff.json");
 			// Convert object to JSON string
 			String jsonInString = mapper.writeValueAsString(persona);
 			System.out.println(jsonInString);
