@@ -41,10 +41,6 @@ public class Persona {
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
-	public LocalDate getFechaNacimientoLocal() {
-		LocalDate fechaN = LocalDate.parse(this.fechaNacimiento);
-		return fechaN;
-	}
 	
 	public String getFechaNacimiento() {
 		return this.fechaNacimiento;
@@ -58,6 +54,10 @@ public class Persona {
 	}
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+	public LocalDate otherGetFechaNacimientoLocal() {
+		LocalDate fechaN = LocalDate.parse(this.fechaNacimiento);
+		return fechaN;
 	}
 	@Override
 	public String toString() {
