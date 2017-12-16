@@ -1,4 +1,4 @@
-package com.cenfotec.proyecto.personas.conexiones;
+package com.cenfotec.proyecto.solicitud.conexion;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,14 +6,15 @@ import java.io.IOException;
 import com.cenfotec.proyecto.documentos.ActualizacionInformacionContribuyente;
 import com.cenfotec.proyecto.documentos.Documento;
 import com.cenfotec.proyecto.personas.Persona;
+import com.cenfotec.proyecto.solicitud.SolicitudLicenciaMunicipalFuncionamiento;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Contribuyente {
+public class SolicitudLicenciaMunicipalFuncionamientoConexion {
 
-	public static void guardarJson(Contribuyente documento) {
+	public static void guardarJson(SolicitudLicenciaMunicipalFuncionamiento documento) {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			mapper.writeValue(new File("Json//Contribuyente.json"), documento);
@@ -26,13 +27,13 @@ public class Contribuyente {
 		}
 	}
 	
-	public static Contribuyente devolverObjecto() {
+	public static SolicitudLicenciaMunicipalFuncionamiento devolverObjecto() {
 		ObjectMapper mapper = new ObjectMapper();
 		File jsonFile = new File("Json//Contribuyente.json");
-		Contribuyente doc=null;
+		SolicitudLicenciaMunicipalFuncionamiento doc=null;
 		try {
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			doc=mapper.readValue(jsonFile,Contribuyente.class);;
+			doc=mapper.readValue(jsonFile,SolicitudLicenciaMunicipalFuncionamiento.class);;
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {

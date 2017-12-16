@@ -1,22 +1,24 @@
-package com.cenfotec.proyecto.personas.conexiones;
+package com.cenfotec.proyecto.solicitud.conexion;
 
 import java.io.File;
 import java.io.IOException;
 
 import com.cenfotec.proyecto.documentos.ActualizacionInformacionContribuyente;
 import com.cenfotec.proyecto.documentos.Documento;
+import com.cenfotec.proyecto.personas.Contribuyente;
 import com.cenfotec.proyecto.personas.Persona;
+import com.cenfotec.proyecto.solicitud.Solicitud;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class FuncionarioMunicipal {
+public class SolicitudConexion {
 
-	public static void guardarJson(FuncionarioMunicipal documento) {
+	public static void guardarJson(Solicitud documento) {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			mapper.writeValue(new File("Json//FuncionarioMunicipal.json"), documento);
+			mapper.writeValue(new File("Json//Solicitud.json"), documento);
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
@@ -26,13 +28,13 @@ public class FuncionarioMunicipal {
 		}
 	}
 	
-	public static FuncionarioMunicipal devolverObjecto() {
+	public static Solicitud devolverObjecto() {
 		ObjectMapper mapper = new ObjectMapper();
-		File jsonFile = new File("Json//FuncionarioMunicipal.json");
-		FuncionarioMunicipal doc=null;
+		File jsonFile = new File("Json//Solicitud.json");
+		Solicitud doc=null;
 		try {
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			doc=mapper.readValue(jsonFile,FuncionarioMunicipal.class);;
+			doc=mapper.readValue(jsonFile,Solicitud.class);;
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
