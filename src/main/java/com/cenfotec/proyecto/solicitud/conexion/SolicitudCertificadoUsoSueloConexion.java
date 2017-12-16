@@ -6,7 +6,6 @@ import java.io.IOException;
 import com.cenfotec.proyecto.documentos.ActualizacionInformacionContribuyente;
 import com.cenfotec.proyecto.documentos.Documento;
 import com.cenfotec.proyecto.personas.Persona;
-import com.cenfotec.proyecto.solicitud.SolicitudCertificadoUsoSuelo;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
